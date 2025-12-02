@@ -30,12 +30,12 @@ This is my technical analysis of ComplexChaos as an **existing platform** — no
 
 ### Key Observations
 
-| Aspect | Assessment |
-|--------|------------|
-| **Mission** | ⭐⭐⭐⭐⭐ Rare and meaningful — collective intelligence at scale |
-| **Validation** | ⭐⭐⭐⭐⭐ Bonn pilot with real diplomats, measurable outcomes |
-| **Technical Foundation** | ⭐⭐⭐⭐ Strong indicators, but limited public visibility |
-| **Opportunity for Growth** | ⭐⭐⭐⭐⭐ Clear evolution paths (eval, observability, platform) |
+| Aspect | Assessment | Based On |
+|--------|------------|----------|
+| **Mission** | ⭐⭐⭐⭐⭐ Rare and meaningful — collective intelligence at scale | [TechCrunch](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/ "TechCrunch: ComplexChaos wants to help groups bridge differences"), [LinkedIn](https://www.linkedin.com/pulse/genesis-evolution-complexchaos-tomy-lorsch-kqoic/ "Founding story and vision") |
+| **Validation** | ⭐⭐⭐⭐⭐ Bonn pilot with real diplomats, measurable outcomes | [WEF Article](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/ "Detailed Bonn pilot coverage with metrics") |
+| **Technical Foundation** | ⭐⭐⭐⭐ Strong indicators, but limited public visibility | [Habermas Machine](https://www.science.org/doi/10.1126/science.adq2852 "Google DeepMind research paper") integration mentioned |
+| **Opportunity for Growth** | ⭐⭐⭐⭐⭐ Clear evolution paths (eval, observability, platform) | Job description analysis |
 
 ---
 
@@ -45,9 +45,9 @@ This is my technical analysis of ComplexChaos as an **existing platform** — no
 
 Based on my research, ComplexChaos positions itself as:
 
-> **"Google Translate for Human Cooperation"**
+> [**"Google Translate for Human Cooperation"**](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/ "TechCrunch: The company describes its approach as translation across human 'languages' - cultural and professional backgrounds")
 
-This is not another collaboration tool — it addresses **cooperation**, where participants have conflicting interests and need structured facilitation to find common ground.
+This is not another collaboration tool — it addresses [**cooperation**](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/ "TechCrunch: 'cooperation' for conflicting interests vs 'collaboration' for shared goals"), where participants have conflicting interests and need structured facilitation to find common ground.
 
 ### 2.2 Key Differentiators (As I Understand Them)
 
@@ -64,16 +64,28 @@ This is not another collaboration tool — it addresses **cooperation**, where p
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
+*Source: Distinction articulated in [TechCrunch coverage](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/ "TechCrunch explains the cooperation vs collaboration framing")*
+
 ### 2.3 Proven Outcomes (Bonn Climate Negotiations)
 
-| Metric | Result | What It Tells Us |
-|--------|--------|------------------|
-| **60%** time reduction | Coordination efficiency | AI can compress alignment cycles |
-| **91%** new perspectives | Insight discovery | System surfaces hidden viewpoints |
-| **35%** empathy increase | Relationship quality | Understanding drives connection |
-| **3x** co-presence | Engagement depth | Even solo prep feels collaborative |
+The [July 2025 Bonn pilot](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/ "WEF: 'In July 2025, at the UNFCCC campus in Bonn, Germany...'") involved [climate negotiators from nine African countries](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/ "WEF: 'climate negotiators from nine African countries'") at the UNFCCC campus:
 
-### 2.4 What I'd Want to Learn More About
+| Metric | Result | What It Tells Us | Source |
+|--------|--------|------------------|--------|
+| [**60%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/ "WEF: '60% reduction in coordination time'") time reduction | Coordination efficiency | AI can compress alignment cycles | WEF |
+| [**91%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/ "WEF: '91% of participants uncovered perspectives they would have otherwise missed'") new perspectives | Insight discovery | System surfaces hidden viewpoints | WEF |
+| [**35%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/ "WEF: '35% rise in perceived empathy among peers'") empathy increase | Relationship quality | Understanding drives connection | WEF |
+| [**3x**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/ "WEF: 'tripled perceived co-presence during solo preparation phases'") co-presence | Engagement depth | Even solo prep feels collaborative | WEF |
+
+### 2.4 Technology Foundations (Public Knowledge)
+
+Based on public materials, ComplexChaos integrates:
+
+- [**Google's Habermas Machine**](https://www.science.org/doi/10.1126/science.adq2852 "Science: 'AI can help groups with opposing views find common ground'") — Research from Google DeepMind on AI-mediated consensus
+- [**OpenAI's ChatGPT**](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/ "TechCrunch mentions ChatGPT integration") — For general language understanding and generation
+- **Semantic translation layer** — ["translates intent and meaning across different human 'languages'"](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/ "TechCrunch: The AI translates across cultural and professional backgrounds")
+
+### 2.5 What I'd Want to Learn More About
 
 These are questions I'd love to explore in interviews — not criticisms, but genuine curiosity:
 
@@ -112,6 +124,8 @@ C4Context
     Rel(complexchaos, auth, "User authentication")
     Rel(complexchaos, analytics, "Usage tracking")
 ```
+
+*LLM integration based on [TechCrunch](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/ "TechCrunch: mentions integration with Google's Habermas Machine and OpenAI's ChatGPT") coverage mentioning Habermas Machine and ChatGPT.*
 
 ### 3.2 Level 2: Container Diagram (Hypothesized)
 
@@ -158,9 +172,11 @@ C4Container
     Rel(ai_svc, llm, "HTTPS")
 ```
 
+*Vue → Next.js migration and PostgreSQL inferred from job description requirements.*
+
 ### 3.3 Level 3: Component Diagram (Consensus Engine - Inferred)
 
-The core of ComplexChaos appears to be a multi-phase consensus engine:
+The core of ComplexChaos appears to be a multi-phase consensus engine. Based on the [WEF description](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/ "WEF: 'AI-powered collaborative processes helped structure priorities and accelerate alignment'") of how the system "structures priorities and accelerates alignment":
 
 ```mermaid
 C4Component
@@ -196,6 +212,8 @@ C4Component
     Rel(perspective_collector, db, "Store")
     Rel(vote_aggregator, db, "Store votes")
 ```
+
+*"Perspective Bridge" component inferred from [TechCrunch](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/ "TechCrunch: AI 'translates intent and meaning across different human languages'") description of cross-domain translation.*
 
 ### 3.4 Data Flow (What I'd Expect)
 
@@ -247,7 +265,7 @@ flowchart TB
 
 ### 4.1 Why Evaluation Matters for AI-Facilitated Consensus
 
-Traditional metrics (speed, user satisfaction) can optimize toward **local maximums** that harm long-term value. For consensus building, this is particularly dangerous:
+Traditional metrics (speed, user satisfaction) can optimize toward **local maximums** that harm long-term value. This concern was highlighted in [TechCrunch coverage](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/ "TechCrunch: ComplexChaos aims to help avoid 'local maximums' in decision-making") — ComplexChaos explicitly aims to avoid "local maximums" in decision-making.
 
 | Trap | What Gets Optimized | What Gets Sacrificed |
 |------|---------------------|----------------------|
@@ -268,6 +286,8 @@ If I were building evaluation infrastructure, I'd propose tracking:
 | **Minority Voice Representation** | % of final output addressing minority views | >30% | Prevents suppression |
 | **Consensus Stability** | Would participants re-affirm after 24h? | >80% | Tests durability |
 | **Human Override Rate** | Frequency of rejecting AI suggestions | 15-40% | Healthy skepticism indicator |
+
+*Metrics designed to address risks identified in [Habermas Machine research](https://www.science.org/doi/10.1126/science.adq2852 "Science: Research discusses challenges of AI-mediated consensus including bias and representation").*
 
 #### Outcome Quality Metrics
 
@@ -345,7 +365,7 @@ flowchart LR
 
 ### 5.2 Trust Architecture
 
-Building trust in AI-facilitated consensus requires explicit mechanisms:
+Building trust in AI-facilitated consensus requires explicit mechanisms. The [WEF article](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/ "WEF: 'AI serves as crucial infrastructure for participation, enhancing collective clarity'") emphasizes that "AI serves as crucial infrastructure for participation" — this creates responsibility:
 
 | Feature | Purpose | Implementation Ideas |
 |---------|---------|---------------------|
@@ -356,7 +376,7 @@ Building trust in AI-facilitated consensus requires explicit mechanisms:
 
 ### 5.3 RAG for Large Contexts
 
-Climate negotiations involve 100k+ pages of documents. Effective RAG is critical:
+Climate negotiations involve [100k+ pages of documents](https://www.linkedin.com/pulse/genesis-evolution-complexchaos-tomy-lorsch-kqoic/ "LinkedIn: References the massive documentation involved in UN negotiations"). Effective RAG is critical:
 
 - **Chunking strategies** for maintaining context
 - **Hybrid retrieval** (keyword + semantic)
@@ -475,7 +495,21 @@ If moving from monolith to microservices, I'd suggest identifying boundaries bas
 
 ---
 
-## Appendix B: Diagram Rendering
+## Appendix B: Sources
+
+All facts and conclusions in this document are grounded in publicly available sources:
+
+| Source | Type | Key Facts Used |
+|--------|------|----------------|
+| [TechCrunch (Sep 2025)](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/) | News | Vision, "Google Translate" metaphor, cooperation vs collaboration distinction, investor backing, Habermas Machine integration |
+| [World Economic Forum (Sep 2025)](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/) | News | Bonn pilot details, all metrics (60%, 91%, 35%, 3x), investor names, UNFCCC location, African nations participation |
+| [LinkedIn - Tomy Lorsch](https://www.linkedin.com/pulse/genesis-evolution-complexchaos-tomy-lorsch-kqoic/) | Founder Post | Founding story, Santa Fe Institute inspiration, research foundations |
+| [Science - Habermas Machine](https://www.science.org/doi/10.1126/science.adq2852) | Research Paper | Google DeepMind consensus research, technical foundations |
+| [ComplexChaos Website](https://www.complexchaos.ai/) | Official | Company information |
+
+---
+
+## Appendix C: Diagram Rendering
 
 All diagrams use Mermaid syntax. To render:
 
@@ -493,6 +527,6 @@ All diagrams use Mermaid syntax. To render:
 
 ---
 
-*Document Version: 2.0*  
+*Document Version: 2.1*  
 *Approach: Brownfield Architecture Review*  
 *Last Updated: December 2025*
