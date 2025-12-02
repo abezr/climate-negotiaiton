@@ -39,16 +39,56 @@ ComplexChaos uses AI not to decide outcomes, but to **facilitate understanding**
 
 ## Architecture at a Glance
 
-```
-┌─────────────┐     ┌──────────────┐     ┌─────────────────┐
-│  Next.js    │────▶│  Supabase    │────▶│  PostgreSQL     │
-│  (Vercel)   │     │  Auth/RT     │     │  + pgvector     │
-└─────────────┘     └──────────────┘     └─────────────────┘
-       │                                        │
-       │           ┌──────────────┐            │
-       └──────────▶│  OpenAI API  │◀───────────┘
-                   │  GPT-4/Ada   │
-                   └──────────────┘
+```mermaid
+flowchart TB
+    subgraph Users["👥 Users"]
+        F["🎯 Facilitator"]
+        P["👤 Participants"]
+        O["👁️ Observers"]
+    end
+
+    subgraph Platform["🏗️ ComplexChaos Platform"]
+        subgraph Frontend["Next.js 14 on Vercel"]
+            UI["React UI + Real-time"]
+        end
+        
+        subgraph Backend["API Layer"]
+            API["API Routes"]
+            CE["Consensus Engine"]
+            AI["AI Orchestrator"]
+        end
+    end
+
+    subgraph Data["💾 Data Layer (Supabase)"]
+        DB[("PostgreSQL\n+ pgvector")]
+        Auth["Auth"]
+        RT["Real-time"]
+    end
+
+    subgraph External["🤖 AI Services"]
+        GPT["OpenAI GPT-4\nSynthesis & Analysis"]
+        EMB["Ada-002\nEmbeddings"]
+    end
+
+    subgraph Cache["⚡ Cache (Upstash)"]
+        Redis[("Redis")]
+    end
+
+    F & P & O --> UI
+    UI --> API
+    UI <--> RT
+    API --> CE
+    CE --> AI
+    API --> Auth
+    API --> DB
+    AI --> GPT & EMB
+    AI --> DB
+    API --> Redis
+
+    style Platform fill:#e8f4f8,stroke:#326ce5,stroke-width:2px
+    style Data fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
+    style External fill:#fff3e0,stroke:#ff9800,stroke-width:2px
+    style Cache fill:#fce4ec,stroke:#e91e63,stroke-width:2px
 ```
 
 **Monthly Cost: ~$15** (OpenAI API only; all infrastructure on free tiers)
