@@ -102,28 +102,9 @@ These are questions I'd love to explore in interviews — not criticisms, but ge
 
 ### 3.1 Level 1: System Context Diagram
 
-```mermaid
-C4Context
-    title System Context Diagram - ComplexChaos Platform (Inferred)
-
-    Person(facilitator, "Facilitator", "Session organizer who configures consensus processes")
-    Person(participant, "Participants", "Stakeholders contributing perspectives and voting")
-    Person(observer, "Observers", "Read-only access to monitor process and outcomes")
-
-    System(complexchaos, "ComplexChaos Platform", "AI-facilitated consensus building platform")
-
-    System_Ext(llm_provider, "LLM Provider", "GPT-4 / Habermas Machine for synthesis")
-    System_Ext(auth, "Identity Provider", "Authentication service")
-    System_Ext(analytics, "Analytics", "Usage tracking and session metrics")
-
-    Rel(facilitator, complexchaos, "Creates sessions, configures process")
-    Rel(participant, complexchaos, "Submits perspectives, votes, receives insights")
-    Rel(observer, complexchaos, "Views session progress and reports")
-    
-    Rel(complexchaos, llm_provider, "Synthesis, summarization, perspective bridging")
-    Rel(complexchaos, auth, "User authentication")
-    Rel(complexchaos, analytics, "Usage tracking")
-```
+<div align="center">
+<img src="./assets/diagrams/c4-system-context.png" alt="System Context Diagram" width="100%">
+</div>
 
 *LLM integration based on [TechCrunch](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/ "TechCrunch: mentions integration with Google's Habermas Machine and OpenAI's ChatGPT") coverage mentioning Habermas Machine and ChatGPT.*
 
@@ -131,46 +112,9 @@ C4Context
 
 Based on the job description mentioning Vue → Next.js migration and microservices:
 
-```mermaid
-C4Container
-    title Container Diagram - ComplexChaos Platform (Hypothesized Current State)
-
-    Person(user, "User", "Facilitator, Participant, or Observer")
-
-    Container_Boundary(frontend, "Frontend") {
-        Container(webapp, "Web Application", "Vue.js (migrating to Next.js)", "Current SPA for session participation")
-        Container(realtime, "Real-time Layer", "WebSocket", "Live updates for collaborative sessions")
-    }
-
-    Container_Boundary(backend, "Backend Services") {
-        Container(api, "API Server", "Node.js / Python", "REST/GraphQL API")
-        Container(consensus_svc, "Consensus Service", "Core business logic", "Perspective aggregation and consensus protocols")
-        Container(ai_svc, "AI Service", "Python / LangChain", "LLM orchestration, prompt management")
-    }
-
-    Container_Boundary(data, "Data Layer") {
-        ContainerDb(db, "Database", "PostgreSQL", "Sessions, users, perspectives, votes")
-        ContainerDb(vector, "Vector Store", "pgvector / Pinecone", "Embeddings for semantic clustering")
-        ContainerDb(cache, "Cache", "Redis", "Session state, rate limiting")
-    }
-
-    Container_Boundary(external, "External Services") {
-        Container_Ext(llm, "LLM API", "OpenAI / Google", "Text generation and analysis")
-    }
-
-    Rel(user, webapp, "HTTPS")
-    Rel(webapp, api, "REST/GraphQL")
-    Rel(webapp, realtime, "WebSocket")
-    
-    Rel(api, consensus_svc, "Internal")
-    Rel(consensus_svc, ai_svc, "LLM requests")
-    
-    Rel(api, db, "SQL")
-    Rel(ai_svc, vector, "Vector operations")
-    Rel(api, cache, "Session state")
-    
-    Rel(ai_svc, llm, "HTTPS")
-```
+<div align="center">
+<img src="./assets/diagrams/c4-container.png" alt="Container Diagram" width="100%">
+</div>
 
 *Vue → Next.js migration and PostgreSQL inferred from job description requirements.*
 
@@ -178,86 +122,17 @@ C4Container
 
 The core of ComplexChaos appears to be a multi-phase consensus engine. Based on the [WEF description](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/ "WEF: 'AI-powered collaborative processes helped structure priorities and accelerate alignment'") of how the system "structures priorities and accelerates alignment":
 
-```mermaid
-C4Component
-    title Component Diagram - Consensus Engine (Inferred)
-
-    Container_Boundary(consensus_engine, "Consensus Engine") {
-        Component(perspective_collector, "Perspective Collector", "Ingests and validates participant inputs")
-        Component(semantic_analyzer, "Semantic Analyzer", "Extracts themes, entities, sentiment")
-        Component(cluster_engine, "Clustering Engine", "Groups similar perspectives")
-        Component(perspective_bridge, "Perspective Bridge", "Translates across domains/cultures")
-        Component(consensus_builder, "Consensus Builder", "Generates candidate statements")
-        Component(vote_aggregator, "Vote Aggregator", "Implements voting protocols")
-        Component(dissent_tracker, "Dissent Tracker", "Preserves minority viewpoints")
-        Component(report_generator, "Report Generator", "Creates final consensus reports")
-    }
-
-    Container_Ext(ai_svc, "AI Service")
-    ContainerDb(db, "Database")
-    ContainerDb(vector, "Vector Store")
-
-    Rel(perspective_collector, semantic_analyzer, "Raw text")
-    Rel(semantic_analyzer, ai_svc, "LLM analysis")
-    Rel(semantic_analyzer, cluster_engine, "Enriched perspectives")
-    Rel(cluster_engine, vector, "Embedding queries")
-    Rel(cluster_engine, perspective_bridge, "Clusters")
-    Rel(perspective_bridge, ai_svc, "Translation requests")
-    Rel(perspective_bridge, consensus_builder, "Bridged perspectives")
-    Rel(consensus_builder, ai_svc, "Statement generation")
-    Rel(consensus_builder, vote_aggregator, "Candidates")
-    Rel(vote_aggregator, dissent_tracker, "Vote results")
-    Rel(dissent_tracker, report_generator, "Complete data")
-    
-    Rel(perspective_collector, db, "Store")
-    Rel(vote_aggregator, db, "Store votes")
-```
+<div align="center">
+<img src="./assets/diagrams/c4-component.png" alt="Component Diagram" width="100%">
+</div>
 
 *"Perspective Bridge" component inferred from [TechCrunch](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/ "TechCrunch: AI 'translates intent and meaning across different human languages'") description of cross-domain translation.*
 
 ### 3.4 Data Flow (What I'd Expect)
 
-```mermaid
-flowchart TB
-    subgraph Participants
-        P1[Participant 1]
-        P2[Participant 2]
-        P3[Participant N]
-    end
-
-    subgraph "Phase 1: Collection"
-        PC[Perspective Collector]
-        SA[Semantic Analyzer]
-        VE[Vector Embeddings]
-    end
-
-    subgraph "Phase 2: Synthesis"
-        CL[Clustering Engine]
-        PB[Perspective Bridge]
-        SUM[Synthesizer]
-    end
-
-    subgraph "Phase 3: Consensus"
-        CB[Consensus Builder]
-        VA[Vote Aggregator]
-    end
-
-    subgraph "Phase 4: Resolution"
-        DT[Dissent Tracker]
-        RG[Report Generator]
-        OUT[Final Report + Minority Views]
-    end
-
-    P1 -->|"Opinion"| PC
-    P2 -->|"Opinion"| PC
-    P3 -->|"Opinion"| PC
-
-    PC --> SA --> VE --> CL
-    CL --> PB --> SUM --> CB
-    CB --> VA --> DT --> RG --> OUT
-
-    style OUT fill:#90EE90
-```
+<div align="center">
+<img src="./assets/diagrams/data-flow.png" alt="Data Flow Diagram" width="100%">
+</div>
 
 ---
 
