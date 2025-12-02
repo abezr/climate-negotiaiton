@@ -6,9 +6,9 @@
 
 ## First Impressions
 
-I'm genuinely grateful for the opportunity to learn about ComplexChaos. After studying the materials, watching the demos, and reading the coverage — I found myself increasingly excited about what you're building.
+I'm genuinely grateful for the opportunity to learn about ComplexChaos. After studying the materials, watching the demos, and reading the coverage — I found myself increasingly excited about what you're building. This is the kind of company I want to grow with.
 
-But I also want to be direct about what I see — both the strengths and the areas where I'd focus energy if I joined.
+But I also want to be direct about what I see — both the strengths and the areas where I'd want us to focus energy together.
 
 ---
 
@@ -51,7 +51,7 @@ The Bonn metrics are strong for a pilot. But for enterprise and long-term credib
 - **Are minority concerns addressed or just noted?**
 - **What's the implementation success rate vs. traditional processes?**
 
-This isn't criticism — it's opportunity. Longitudinal evaluation could be a differentiator.
+This isn't criticism — it's opportunity. Building this together could become a real differentiator.
 
 ### 2. Domain Prioritization
 
@@ -74,7 +74,7 @@ AI-facilitated consensus carries real responsibility:
 | Over-reliance | Human override mechanisms |
 | Accountability gaps | Full audit trail |
 
-The "dissent tracking" mentioned in materials is a good start. I'd want to build this into a core product differentiator.
+The "dissent tracking" mentioned in materials is a good start. I'd be eager to help evolve this into a core product differentiator.
 
 ---
 
@@ -113,13 +113,15 @@ For a zero-cost proof-of-concept (~$15/month):
 
 ## Bottom Line
 
-**What excites me**: A rare mission with real validation and serious backing.
+**What excites me**: A rare mission with real validation and serious backing — and a team I'd be proud to join.
 
-**What I'd push on**: Evaluation depth, domain focus, trust architecture.
+**Where I see us focusing**: Evaluation depth, domain prioritization, trust architecture.
 
-**What I'd build**: Metrics infrastructure, transparency features, RAG optimization.
+**What I'm eager to build**: Metrics infrastructure, transparency features, RAG optimization.
 
-**One question**: How do you help users trust AI enough to benefit, but stay skeptical enough to catch errors?
+**Question I'd love to explore together**: How do we help users trust AI enough to benefit, but stay skeptical enough to catch errors?
+
+I'm not looking for just a job — I'm looking for a mission worth committing to. ComplexChaos feels like that.
 
 ---
 
