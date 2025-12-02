@@ -351,7 +351,7 @@ If moving from monolith to microservices, I'd suggest identifying boundaries bas
 1. What's the current AI orchestration approach? LangChain, custom, other?
 2. How do you handle LLM failures and degradation gracefully?
 3. What's the vector store strategy — embedded (pgvector) or external?
-4. What drove the Vue → Next.js migration decision?
+4. What was the specific motivation to migrate from Vue to Next.js? (e.g., ecosystem, performance, hiring?)
 
 ### Evaluation & Quality
 5. How do you measure consensus quality beyond the Bonn metrics?
