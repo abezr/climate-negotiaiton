@@ -1,0 +1,52 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#326ce5', 'lineColor': '#666'}}}%%
+
+flowchart TB
+    subgraph Users["🌐 Users"]
+        Browser["Browser<br/>(Any device)"]
+    end
+
+    subgraph Vercel["☁️ Vercel (Free Tier)"]
+        Edge["Edge Network<br/>(Global CDN)"]
+        NextJS["Next.js App<br/>• Frontend (React)<br/>• API Routes<br/>• AI Orchestration"]
+    end
+
+    subgraph Supabase["🐘 Supabase (Free Tier)"]
+        Auth["Supabase Auth<br/>• JWT tokens<br/>• Social login"]
+        DB[("PostgreSQL<br/>• 500MB storage<br/>• pgvector enabled")]
+        Realtime["Realtime<br/>• WebSocket<br/>• Presence")]
+    end
+
+    subgraph Upstash["⚡ Upstash (Free Tier)"]
+        Redis[("Redis<br/>• 10k cmd/day<br/>• Rate limiting")]
+    end
+
+    subgraph OpenAI["🤖 OpenAI (Pay-per-use)"]
+        GPT4["GPT-4 Turbo<br/>~$0.01/1k tokens"]
+        Ada["Ada-002<br/>~$0.0001/1k tokens"]
+    end
+
+    Browser -->|"HTTPS"| Edge
+    Edge -->|"Route"| NextJS
+    
+    NextJS -->|"Auth"| Auth
+    NextJS -->|"SQL (Prisma)"| DB
+    NextJS -->|"Subscribe"| Realtime
+    NextJS -->|"Cache"| Redis
+    NextJS -->|"LLM API"| GPT4
+    NextJS -->|"Embeddings"| Ada
+
+    style Vercel fill:#E8F5E9,stroke:#4CAF50,stroke-width:2px
+    style Supabase fill:#E3F2FD,stroke:#2196F3,stroke-width:2px
+    style Upstash fill:#FFF3E0,stroke:#FF9800,stroke-width:2px
+    style OpenAI fill:#FCE4EC,stroke:#E91E63,stroke-width:2px
+
+    %% Cost annotations
+    subgraph Cost["💰 Monthly Cost"]
+        C1["Vercel: $0"]
+        C2["Supabase: $0"]
+        C3["Upstash: $0"]
+        C4["OpenAI: ~$15"]
+        C5["TOTAL: ~$15/mo"]
+    end
+
+    style Cost fill:#FFFDE7,stroke:#FFC107

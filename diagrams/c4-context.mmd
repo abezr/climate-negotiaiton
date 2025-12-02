@@ -1,0 +1,26 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#326ce5', 'primaryTextColor': '#fff', 'primaryBorderColor': '#1a4d8f', 'lineColor': '#666', 'secondaryColor': '#e8f4f8', 'tertiaryColor': '#f5f5f5'}}}%%
+
+C4Context
+    title System Context Diagram - ComplexChaos Consensus Platform
+
+    Person(facilitator, "Facilitator", "Session organizer who configures consensus processes")
+    Person(participant, "Participants", "Stakeholders contributing perspectives and voting on consensus")
+    Person(observer, "Observers", "Read-only access to monitor process and outcomes")
+
+    Enterprise_Boundary(b0, "ComplexChaos Platform") {
+        System(complexchaos, "ComplexChaos", "AI-facilitated consensus building platform that bridges perspectives and accelerates alignment")
+    }
+
+    System_Ext(openai, "OpenAI API", "GPT-4 for synthesis, translation, and perspective analysis")
+    System_Ext(supabase, "Supabase", "Database, Auth, and Real-time services")
+    System_Ext(analytics, "PostHog", "Session analytics and metrics")
+
+    Rel(facilitator, complexchaos, "Creates sessions, configures process, reviews outcomes", "HTTPS")
+    Rel(participant, complexchaos, "Submits perspectives, votes, receives AI insights", "HTTPS/WebSocket")
+    Rel(observer, complexchaos, "Views session progress and final reports", "HTTPS")
+    
+    Rel(complexchaos, openai, "Synthesis, summarization, perspective bridging", "HTTPS/REST")
+    Rel(complexchaos, supabase, "Data persistence, auth, real-time", "HTTPS")
+    Rel(complexchaos, analytics, "Usage tracking", "HTTPS")
+
+    UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")

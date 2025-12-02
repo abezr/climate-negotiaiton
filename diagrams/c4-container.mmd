@@ -1,0 +1,42 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#326ce5', 'primaryTextColor': '#fff', 'primaryBorderColor': '#1a4d8f', 'lineColor': '#666', 'secondaryColor': '#e8f4f8', 'tertiaryColor': '#f5f5f5'}}}%%
+
+C4Container
+    title Container Diagram - ComplexChaos Platform
+
+    Person(user, "User", "Facilitator, Participant, or Observer")
+
+    Container_Boundary(platform, "ComplexChaos Platform") {
+        Container(webapp, "Web Application", "Next.js 14, TypeScript, React", "Responsive SPA for session participation and management")
+        Container(api, "API Layer", "Next.js API Routes", "REST API for session management and AI orchestration")
+        Container(consensus, "Consensus Engine", "TypeScript", "Core logic: clustering, synthesis, voting, evaluation")
+        Container(ai_orch, "AI Orchestrator", "LangChain, Vercel AI SDK", "LLM workflow management, prompt engineering")
+    }
+
+    Container_Boundary(data, "Data Layer") {
+        ContainerDb(db, "PostgreSQL", "Supabase", "Sessions, users, perspectives, votes, evaluations")
+        ContainerDb(vector, "Vector Store", "pgvector extension", "Embeddings for semantic clustering")
+        ContainerDb(cache, "Cache", "Upstash Redis", "Session state, rate limiting")
+    }
+
+    Container_Boundary(external, "External Services") {
+        System_Ext(llm, "OpenAI API", "GPT-4 Turbo, Ada-002")
+        System_Ext(auth, "Supabase Auth", "Authentication")
+        System_Ext(realtime, "Supabase Realtime", "WebSocket subscriptions")
+    }
+
+    Rel(user, webapp, "Uses", "HTTPS")
+    Rel(webapp, api, "Calls", "REST/JSON")
+    Rel(webapp, realtime, "Subscribes", "WebSocket")
+    
+    Rel(api, consensus, "Invokes")
+    Rel(api, ai_orch, "Requests AI tasks")
+    Rel(consensus, ai_orch, "Requests synthesis")
+    
+    Rel(api, db, "Reads/Writes", "Prisma ORM")
+    Rel(ai_orch, vector, "Stores/queries embeddings")
+    Rel(api, cache, "Caches state")
+    
+    Rel(ai_orch, llm, "API calls", "HTTPS")
+    Rel(api, auth, "Validates tokens")
+
+    UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")

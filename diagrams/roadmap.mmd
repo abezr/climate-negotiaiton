@@ -1,0 +1,35 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#326ce5'}}}%%
+
+gantt
+    title ComplexChaos MVP Development Roadmap
+    dateFormat  YYYY-MM-DD
+    
+    section Phase 0: Setup
+    Project scaffolding           :done, p0a, 2024-01-01, 1d
+    Supabase & Vercel setup       :done, p0b, 2024-01-02, 1d
+    CI/CD pipeline                :done, p0c, 2024-01-03, 1d
+    
+    section Phase 1: Foundation
+    User auth flow                :active, p1a, 2024-01-04, 3d
+    Session CRUD                  :p1b, 2024-01-07, 3d
+    Perspective submission UI     :p1c, 2024-01-10, 3d
+    Real-time presence            :p1d, 2024-01-13, 2d
+    
+    section Phase 2: AI Engine
+    Embedding pipeline            :p2a, 2024-01-15, 3d
+    Perspective clustering        :p2b, 2024-01-18, 3d
+    AI synthesis prompts          :p2c, 2024-01-21, 4d
+    Consensus generator           :p2d, 2024-01-25, 3d
+    Voting mechanisms             :p2e, 2024-01-28, 3d
+    Dissent tracking              :p2f, 2024-01-31, 2d
+    
+    section Phase 3: Polish
+    Evaluation metrics            :p3a, 2024-02-02, 3d
+    Dashboard visualization       :p3b, 2024-02-05, 3d
+    Report export                 :p3c, 2024-02-08, 2d
+    Onboarding flow               :p3d, 2024-02-10, 2d
+    
+    section Phase 4: Demo
+    End-to-end testing            :p4a, 2024-02-12, 2d
+    Demo scenario prep            :p4b, 2024-02-14, 2d
+    Stakeholder Demo              :milestone, crit, demo, 2024-02-16, 0d

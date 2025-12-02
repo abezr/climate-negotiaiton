@@ -1,0 +1,66 @@
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#326ce5', 'lineColor': '#666'}}}%%
+
+flowchart TB
+    subgraph Participants["👥 Participants"]
+        P1["Participant 1<br/>(e.g., Marketing)"]
+        P2["Participant 2<br/>(e.g., Engineering)"]
+        P3["Participant N<br/>(e.g., Finance)"]
+    end
+
+    subgraph Phase1["📝 Phase 1: Perspective Collection"]
+        PC["Perspective<br/>Collector"]
+        SA["Semantic<br/>Analyzer"]
+        VE["Vector<br/>Embeddings"]
+    end
+
+    subgraph Phase2["🔍 Phase 2: AI Synthesis"]
+        CL["Clustering<br/>Engine"]
+        PB["Perspective<br/>Bridge"]
+        SUM["Synthesizer"]
+    end
+
+    subgraph Phase3["🗳️ Phase 3: Consensus Building"]
+        CB["Consensus<br/>Builder"]
+        QG["Question<br/>Generator"]
+        VA["Vote<br/>Aggregator"]
+    end
+
+    subgraph Phase4["📊 Phase 4: Resolution"]
+        DT["Dissent<br/>Tracker"]
+        RG["Report<br/>Generator"]
+        OUT(["✅ Final Consensus<br/>+ Minority Report"])
+    end
+
+    %% Phase 1 Flow
+    P1 -->|"Opinion"| PC
+    P2 -->|"Opinion"| PC
+    P3 -->|"Opinion"| PC
+    PC -->|"Raw text"| SA
+    SA -->|"Themes, sentiment"| VE
+
+    %% Phase 2 Flow
+    VE -->|"Semantic vectors"| CL
+    CL -->|"Clusters"| PB
+    PB -->|"Bridged views"| SUM
+
+    %% Phase 3 Flow
+    SUM -->|"Themes"| CB
+    CB -->|"Questions"| QG
+    QG -.->|"Clarifications"| P1
+    QG -.->|"Clarifications"| P2
+    QG -.->|"Clarifications"| P3
+    CB -->|"Candidates"| VA
+    P1 -.->|"Vote"| VA
+    P2 -.->|"Vote"| VA
+    P3 -.->|"Vote"| VA
+
+    %% Phase 4 Flow
+    VA -->|"Results"| DT
+    DT -->|"Minority views"| RG
+    RG --> OUT
+
+    style OUT fill:#90EE90,stroke:#228B22,stroke-width:2px
+    style Phase1 fill:#E6F3FF,stroke:#326ce5
+    style Phase2 fill:#FFF3E6,stroke:#FF8C00
+    style Phase3 fill:#E6FFE6,stroke:#228B22
+    style Phase4 fill:#FFE6FF,stroke:#9932CC
