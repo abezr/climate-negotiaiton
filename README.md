@@ -1,14 +1,12 @@
 # ComplexChaos: Architecture Review
 
-> **What I learned, what excites me, and where I'd focus.**
+> **An honest assessment of ComplexChaos as a platform, product, and engineering challenge — prepared for interview discussion.**
 
 ---
 
 ## First Impressions
 
 I'm genuinely grateful for the opportunity to learn about ComplexChaos. After studying the materials, watching the demos, and reading the coverage — I found myself increasingly excited about what you're building. This is the kind of company I want to grow with.
-
-But I also want to be direct about what I see — both the strengths and the areas where I'd want us to focus energy together.
 
 ---
 
