@@ -35,77 +35,50 @@ I'm genuinely grateful for the opportunity to learn about ComplexChaos. After st
 
 ---
 
-## Where I'd Focus
+## Areas to Explore Together
 
 <div align="center">
-<img src="./assets/infographics/local-maximum-traps.png" alt="Evaluation Challenges" width="90%">
+<img src="./assets/infographics/local-maximum-traps.png" alt="Evaluation Framework" width="90%">
 </div>
 
-### 1. Evaluation Depth
+### 1. Evaluation & Observability
 
-The Bonn metrics are strong for a pilot. But for enterprise and long-term credibility:
+The Bonn metrics are strong. For scaling to enterprise, I'd be excited to help build:
 
-- **Do consensus decisions hold after 30 days?**
-- **Are minority concerns addressed or just noted?**
-- **What's the implementation success rate vs. traditional processes?**
+- **Longitudinal tracking** — do consensus decisions hold after 30 days?
+- **LLM observability** — tracing, debugging, regression detection
+- **Outcome correlation** — linking AI suggestions to implementation success
 
-This isn't criticism — it's opportunity. Building this together could become a real differentiator.
+### 2. Trust & Transparency
 
-### 2. Domain Prioritization
+AI-facilitated consensus carries responsibility. Strengthening trust architecture could include:
 
-The vision spans climate, enterprise, public health, governance. Each has different:
-- User personas
-- Workflows  
-- Success metrics
-- Go-to-market
+| Capability | Purpose |
+|------------|---------|
+| "Show AI reasoning" | Users see why clusters formed, why this synthesis |
+| Challenge tools | Built-in ways to question AI outputs |
+| Audit trails | Every decision logged and explainable |
+| Dissent preservation | Minority views tracked, not smoothed over |
 
-**My question**: Who's the primary user today? Going deep in one domain before expanding typically wins.
+### 3. Platform Evolution
 
-### 3. Trust Architecture
+Based on the job description (Vue → Next.js migration, monolith → microservices):
 
-AI-facilitated consensus carries real responsibility:
-
-| Risk | Mitigation Needed |
-|------|-------------------|
-| AI agenda-setting | Transparent reasoning |
-| Minority suppression | Explicit dissent tracking |
-| Over-reliance | Human override mechanisms |
-| Accountability gaps | Full audit trail |
-
-The "dissent tracking" mentioned in materials is a good start. I'd be eager to help evolve this into a core product differentiator.
+- **Incremental migration** — strangler fig pattern, feature flags, parallel running
+- **Service boundaries** — identifying what to extract first based on change frequency
+- **Maintaining velocity** — shipping features while modernizing
 
 ---
 
 ## What I'd Contribute
 
-<div align="center">
-<img src="./assets/infographics/tech-stack.png" alt="Tech Stack" width="90%">
-</div>
-
-| Area | Contribution |
-|------|--------------|
-| **Evaluation Framework** | Automated metrics, longitudinal tracking, regression detection |
-| **RAG Pipelines** | Handle 100k+ page contexts for negotiations |
-| **Trust Features** | "Show AI reasoning", challenge tools, audit trails |
-| **Vue → Next.js Migration** | Direct alignment with job description |
-| **Observability** | LLM tracing, debugging "why did AI say that?" |
-
----
-
-## Proposed MVP Architecture
-
-For a zero-cost proof-of-concept (~$15/month):
-
-| Layer | Choice | Why |
-|-------|--------|-----|
-| **Frontend** | Next.js 14 | Job alignment, Vercel free tier |
-| **Database** | Supabase PostgreSQL + pgvector | 500MB free, embeddings built-in |
-| **AI** | OpenAI GPT-4 Turbo | Best reasoning for synthesis |
-| **Real-time** | Supabase Realtime | No separate WebSocket cost |
-
-<div align="center">
-<img src="./assets/infographics/architecture.png" alt="Architecture" width="90%">
-</div>
+| Area | Experience I Bring |
+|------|-------------------|
+| **AI/LLM Systems** | RAG pipelines, prompt orchestration, vector stores, automated evaluation |
+| **Platform Migration** | Oracle→PostgreSQL, monolith decomposition, legacy modernization |
+| **Observability** | Structured tracing for LLM calls, experiment tracking, metrics pipelines |
+| **Full-Stack** | React, Node.js, TypeScript, .NET — 14 years shipping production systems |
+| **Team Growth** | Mentored 5 engineers, designed interview processes, knowledge transfer |
 
 ---
 
@@ -113,9 +86,9 @@ For a zero-cost proof-of-concept (~$15/month):
 
 **What excites me**: A rare mission with real validation and serious backing — and a team I'd be proud to join.
 
-**Where I see us focusing**: Evaluation depth, domain prioritization, trust architecture.
+**Where I see us focusing**: Evaluation depth, trust architecture, platform evolution.
 
-**What I'm eager to build**: Metrics infrastructure, transparency features, RAG optimization.
+**What I'm eager to build**: Observability infrastructure, transparency features, migration pathways.
 
 **Question I'd love to explore together**: How do we help users trust AI enough to benefit, but stay skeptical enough to catch errors?
 
