@@ -14,6 +14,7 @@
 6. [Migration Considerations](#6-migration-considerations)
 7. [Risk Analysis](#7-risk-analysis)
 8. [How I'd Contribute](#8-how-id-contribute)
+9. [Appendix C: Negotiation Walkthrough](#appendix-c-negotiation-walkthrough)
 
 ---
 
@@ -406,7 +407,66 @@ All facts and conclusions in this document are grounded in publicly available so
 
 ---
 
-## Appendix C: Diagram Rendering
+## Appendix C: Negotiation Walkthrough
+
+This appendix illustrates how the "Habermas Flow" works in practice with a concrete scenario, bridging the high-level architecture with user experience.
+
+### C.1 The Flow Schema
+
+<div align="center">
+<img src="./assets/diagrams/negotiation-flow.png" alt="Negotiation Flow Schema" width="100%">
+</div>
+
+### C.2 Commented Sample: "The Remote Work Policy"
+
+**Scenario**: A company needs a new Remote Work Policy.
+**The Conflict**: Leadership wants control/culture; Employees want autonomy/flexibility.
+
+#### Step 1: Private Elicitation (The Inputs)
+
+*Participants submit views privately to avoid groupthink.*
+
+| Participant | Input | Architecture Note |
+|-------------|-------|-------------------|
+| **Alice (VP Eng)** | "We need 2-3 days of deep work at home. Commuting kills coding flow." | **Perspective Collector** ingests raw text. |
+| **Bob (CEO)** | "We need serendipity. Innovation happens at the coffee machine. Everyone in 4 days/week." | **Semantic Analyzer** extracts key entities: "deep work" vs "serendipity". |
+| **Charlie (HR)** | "We need a consistent policy for fairness and tax compliance." | **Vector Store** places these inputs in semantic space. Note the distance between Alice and Bob. |
+
+#### Step 2: AI Synthesis (The Draft)
+
+*The AI analyzes the vector cluster and attempts a bridge.*
+
+> **AI Draft 1:** "The company will adopt a hybrid model requiring 3 days in the office for all employees to ensure collaboration, with 2 flexible days for focused work."
+
+*   **Critique from Alice:** "Random 3 days destroys deep work blocks. If I come in Tue/Thu/Fri, I can't code deeply."
+*   **Critique from Bob:** "If everyone picks different days, the office is empty anyway. No serendipity."
+
+**Architecture Note**: The **Consensus Builder** sees that Draft 1 failed the "Utility Function" of both key stakeholders. It enters the **Refinement Loop**.
+
+#### Step 3: Refinement (The Bridge)
+
+*The AI uses the critique to find a structural solution, not just a compromise.*
+
+> **AI Draft 2:** "We will adopt 'Anchor Days' (Mon/Thu) where attendance is mandatory for synchronization and culture. Tue/Wed/Fri are 'Deep Work Days' where presence is optional. Teams coordinate their specific anchor days."
+
+*   **Response from Alice:** "Better. I can block Tue/Wed for coding."
+*   **Response from Bob:** "Acceptable. I know when the office will be full."
+
+#### Step 4: Final Consensus Statement
+
+> **CONSENSUS REACHED:**
+> "The policy adopts a **Structured Hybrid Model**:
+> 1. **Synchronization:** Two fixed 'Anchor Days' per team for meetings.
+> 2. **Focus:** Three flexible 'Deep Work Days'.
+> 3. **Fairness:** HR to audit anchor day compliance."
+>
+> *Minority Report (Preserved):* Some sales staff preferred full remote; this was noted but overridden by the consensus on culture.
+
+**Architecture Note**: The **Dissent Tracker** logs the sales staff objection. The **Report Generator** finalizes the document.
+
+---
+
+## Appendix D: Diagram Rendering
 
 All diagrams use Mermaid syntax. To render:
 
@@ -424,6 +484,6 @@ All diagrams use Mermaid syntax. To render:
 
 ---
 
-*Document Version: 2.1*  
+*Document Version: 2.2*  
 *Approach: Brownfield Architecture Review*  
 *Last Updated: December 2025*
