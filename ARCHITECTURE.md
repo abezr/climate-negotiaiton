@@ -134,6 +134,28 @@ The core of ComplexChaos appears to be a multi-phase consensus engine. Based on 
 <img src="./assets/diagrams/data-flow.png" alt="Data Flow Diagram" width="100%">
 </div>
 
+### 3.5 The Consensus Algorithm: Caucus Mediation Flow
+
+Based on the [Habermas Machine research](https://www.science.org/doi/10.1126/science.adq2852 "Science: 'AI can help humans find common ground'"), the core algorithm follows a **"Caucus Mediation"** pattern designed to avoid groupthink and local maximums:
+
+1.  **Private Elicitation (The Caucus)**
+    *   Participants submit perspectives *privately* to the AI.
+    *   *Why*: Prevents anchoring bias and social pressure (groupthink).
+    
+2.  **AI Synthesis & Bridging**
+    *   The AI (LLM) analyzes all inputs to identify latent shared values and potential bridges.
+    *   It generates a *Candidate Consensus Statement*.
+    
+3.  **Critique & Dissent**
+    *   Participants do not just vote "Yes/No". They **critique** the statement.
+    *   *Key Mechanism*: "What did this summary miss?" / "Whose view is underrepresented?"
+    
+4.  **Iterative Refinement**
+    *   The AI regenerates the statement to address the critiques.
+    *   This loop continues until **Consensus Stability** is reached (critiques diminish).
+
+*This iterative critique step is how the algorithm escapes "local maximums" (shallow agreement) and finds a "global maximum" (deep consensus that includes minority views).*
+
 ---
 
 ## 4. Evaluation Framework
