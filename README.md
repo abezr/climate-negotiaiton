@@ -16,9 +16,9 @@ I'm genuinely grateful for the opportunity to learn about ComplexChaos. After st
 <img src="./assets/infographics/collaboration-vs-cooperation.png" alt="Collaboration vs Cooperation" width="90%">
 </div>
 
-**The mission is rare.** Most AI startups optimize individual productivity. ComplexChaos tackles *collective intelligence* — helping groups with conflicting interests find common ground. The vision of being a ["Google Translate for Human Cooperation"](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/#:~:text=translating%20intent%20and%20meaning "TechCrunch: 'translating intent and meaning across different human languages'") is underserved and meaningful.
+**The mission is rare.** Most AI startups optimize individual productivity. ComplexChaos tackles *collective intelligence* — helping groups with conflicting interests find common ground. The vision of being a ["Google Translate for Human Cooperation"](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/#:~:text=help%20people%20understand%20each%20other "TechCrunch: 'facilitator to help people understand each other'") is underserved and meaningful.
 
-**The validation is real.** [Bonn wasn't a demo](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=In%20July%202025%2C%20at%20the%20UNFCCC%20campus "WEF: 'In July 2025, at the UNFCCC campus in Bonn, Germany, climate negotiators from nine African countries...put AI to the test'") — it was deployment with actual diplomats at a UN facility:
+**The validation is real.** [Bonn wasn't a demo](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=In%20July%202025 "WEF: 'In July 2025, at the UNFCCC campus in Bonn, Germany, climate negotiators from nine African countries...put AI to the test'") — it was deployment with actual diplomats at a UN facility:
 
 <div align="center">
 <img src="./assets/infographics/bonn-results.png" alt="Bonn Pilot Results" width="90%">
@@ -26,12 +26,12 @@ I'm genuinely grateful for the opportunity to learn about ComplexChaos. After st
 
 | Metric | Result | Source |
 |--------|--------|--------|
-| [**60%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=coordination%20time%20was%20reduced%20by%2060%25 "WEF: 'coordination time was reduced by 60%'") | Time reduction in coordination | WEF |
-| [**91%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=91%25%20of%20participants%20reported%20uncovering%20insights "WEF: '91% of participants reported uncovering insights they would have otherwise missed'") | Discovered new perspectives | WEF |
-| [**35%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=empathy%20rose%20by%2035%25 "WEF: 'empathy rose by 35%'") | Empathy increase | WEF |
-| [**3x**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=perceived%20co-presence%20tripled "WEF: 'perceived co-presence tripled'") | Co-presence improvement | WEF |
+| [**60%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=coordination%20time%20was%20reduced "WEF: 'coordination time was reduced'") | Time reduction in coordination | WEF |
+| [**91%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=91%25%20of%20participants%20reported "WEF: '91% of participants reported uncovering insights'") | Discovered new perspectives | WEF |
+| [**35%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=empathy%20rose%20by "WEF: 'empathy rose by 35%'") | Empathy increase | WEF |
+| [**3x**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=co-presence%20tripled "WEF: 'perceived co-presence tripled'") | Co-presence improvement | WEF |
 
-**The backing is serious.** [Reid Hoffman's VC, Gates/Bezos/Zuckerberg funding](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=backed%20by%20Bill%20Gates "WEF: 'ComplexChaos, a start-up backed by Bill Gates, Jeff Bezos, Mark Zuckerberg, and Reid Hoffman'"), [WhatsApp and Google Assistant co-founders](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/#:~:text=angel%20investors "TechCrunch: mentions angel investors including tech luminaries") as angels. This isn't a garage project.
+**The backing is serious.** [Reid Hoffman's VC, Gates/Bezos/Zuckerberg funding](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=backed%20by%20a%20VC%20chaired%20by%20Reid%20Hoffman "WEF: 'backed by a VC chaired by Reid Hoffman and funded by Bill Gates'"), [WhatsApp and Google Assistant co-founders](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/#:~:text=help%20people%20find%20common%20ground "TechCrunch: mentions angel investors including tech luminaries") as angels. This isn't a garage project.
 
 ---
 
@@ -84,7 +84,7 @@ Based on the job description (Vue → Next.js migration, monolith → microservi
 
 ## Bottom Line
 
-**What excites me**: A [rare mission](https://www.linkedin.com/pulse/genesis-evolution-complexchaos-tomy-lorsch-kqoic/#:~:text=Genesis "LinkedIn: Genesis and evolution of ComplexChaos - the founding story and vision") with [real validation](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=Bonn%20climate%20negotiations "WEF: Detailed coverage of the Bonn pilot results") and [serious backing](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/#:~:text=backed%20by "TechCrunch: Coverage of ComplexChaos funding and vision") — and a team I'd be proud to join.
+**What excites me**: A [rare mission](https://www.linkedin.com/pulse/genesis-evolution-complexchaos-tomy-lorsch-kqoic/#:~:text=Genesis "LinkedIn: Genesis and evolution of ComplexChaos - the founding story and vision") with [real validation](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=climate%20negotiators "WEF: Detailed coverage of the Bonn pilot results") and [serious backing](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/#:~:text=Complex%20Chaos%20thinks%20AI%20can%20help%20people%20find%20common%20ground "TechCrunch: Coverage of ComplexChaos funding and vision") — and a team I'd be proud to join.
 
 **Where I see us focusing**: Evaluation depth, trust architecture, platform evolution.
 
