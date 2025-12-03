@@ -46,7 +46,7 @@ This is my technical analysis of ComplexChaos as an **existing platform** — no
 
 Based on my research, ComplexChaos positions itself as:
 
-> [**"Google Translate for Human Cooperation"**](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/#:~:text=Google%20Translate%20for%20human%20cooperation "TechCrunch: The company describes its approach as translation across human 'languages' - cultural and professional backgrounds")
+> [**"Google Translate for Human Cooperation"**](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/#:~:text=translating%20intent%20and%20meaning "TechCrunch: 'translating intent and meaning across different human languages'")
 
 This is not another collaboration tool — it addresses [**cooperation**](https://techcrunch.com/2025/09/29/complex-chaos-thinks-ai-can-help-people-find-common-ground/#:~:text=cooperation%20rather%20than%20collaboration "TechCrunch: 'cooperation' for conflicting interests vs 'collaboration' for shared goals"), where participants have conflicting interests and need structured facilitation to find common ground.
 
@@ -73,10 +73,10 @@ The [July 2025 Bonn pilot](https://www.weforum.org/stories/2025/09/ai-diplomacy-
 
 | Metric | Result | What It Tells Us | Source |
 |--------|--------|------------------|--------|
-| [**60%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=reduction%20in%20coordination%20time "WEF: '60% reduction in coordination time'") time reduction | Coordination efficiency | AI can compress alignment cycles | WEF |
-| [**91%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=participants%20uncovered%20perspectives "WEF: '91% of participants uncovered perspectives they would have otherwise missed'") new perspectives | Insight discovery | System surfaces hidden viewpoints | WEF |
-| [**35%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=rise%20in%20perceived%20empathy "WEF: '35% rise in perceived empathy among peers'") empathy increase | Relationship quality | Understanding drives connection | WEF |
-| [**3x**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=tripled%20perceived%20co-presence "WEF: 'tripled perceived co-presence during solo preparation phases'") co-presence | Engagement depth | Even solo prep feels collaborative | WEF |
+| [**60%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=coordination%20time%20was%20reduced%20by%2060%25 "WEF: 'coordination time was reduced by 60%'") time reduction | Coordination efficiency | AI can compress alignment cycles | WEF |
+| [**91%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=91%25%20of%20participants%20reported%20uncovering%20insights "WEF: '91% of participants reported uncovering insights they would have otherwise missed'") new perspectives | Insight discovery | System surfaces hidden viewpoints | WEF |
+| [**35%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=empathy%20rose%20by%2035%25 "WEF: 'empathy rose by 35%'") empathy increase | Relationship quality | Understanding drives connection | WEF |
+| [**3x**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=perceived%20co-presence%20tripled "WEF: 'perceived co-presence tripled'") co-presence | Engagement depth | Even solo prep feels collaborative | WEF |
 
 ### 2.4 Technology Foundations (Public Knowledge)
 
