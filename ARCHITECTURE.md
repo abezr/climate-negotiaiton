@@ -73,9 +73,9 @@ The [July 2025 Bonn pilot](https://www.weforum.org/stories/2025/09/ai-diplomacy-
 
 | Metric | Result | What It Tells Us | Source |
 |--------|--------|------------------|--------|
-| [**60%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=60%25%20reduction%20in%20coordination%20time "WEF: '60% reduction in coordination time'") time reduction | Coordination efficiency | AI can compress alignment cycles | WEF |
-| [**91%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=91%25%20of%20participants%20uncovered "WEF: '91% of participants uncovered perspectives they would have otherwise missed'") new perspectives | Insight discovery | System surfaces hidden viewpoints | WEF |
-| [**35%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=35%25%20rise%20in%20empathy "WEF: '35% rise in perceived empathy among peers'") empathy increase | Relationship quality | Understanding drives connection | WEF |
+| [**60%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=reduction%20in%20coordination%20time "WEF: '60% reduction in coordination time'") time reduction | Coordination efficiency | AI can compress alignment cycles | WEF |
+| [**91%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=participants%20uncovered%20perspectives "WEF: '91% of participants uncovered perspectives they would have otherwise missed'") new perspectives | Insight discovery | System surfaces hidden viewpoints | WEF |
+| [**35%**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=rise%20in%20perceived%20empathy "WEF: '35% rise in perceived empathy among peers'") empathy increase | Relationship quality | Understanding drives connection | WEF |
 | [**3x**](https://www.weforum.org/stories/2025/09/ai-diplomacy-scale-inclusion-global-climate-negotiations/#:~:text=tripled%20perceived%20co-presence "WEF: 'tripled perceived co-presence during solo preparation phases'") co-presence | Engagement depth | Even solo prep feels collaborative | WEF |
 
 ### 2.4 Technology Foundations (Public Knowledge)
@@ -274,7 +274,7 @@ Building trust in AI-facilitated consensus requires explicit mechanisms. The [WE
 
 ### 5.3 RAG for Large Contexts
 
-Climate negotiations involve [100k+ pages of documents](https://www.linkedin.com/pulse/genesis-evolution-complexchaos-tomy-lorsch-kqoic/#:~:text=100k%2B%20pages "LinkedIn: References the massive documentation involved in UN negotiations"). Effective RAG is critical:
+Climate negotiations involve [100k+ pages of documents](https://www.linkedin.com/pulse/genesis-evolution-complexchaos-tomy-lorsch-kqoic/#:~:text=pages%20of%20documents "LinkedIn: References the massive documentation involved in UN negotiations"). Effective RAG is critical:
 
 - **Chunking strategies** for maintaining context
 - **Hybrid retrieval** (keyword + semantic)
