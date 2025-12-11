@@ -192,10 +192,10 @@ If I were building evaluation infrastructure, I'd propose tracking:
 | Metric | Definition | Target |
 |--------|------------|--------|
 | **Actionability** | Can consensus convert to concrete actions? | >75% |
-| **Satisfaction Equity** | No role group's mean satisfaction >1 std dev below overall mean | Monitor for outliers |
+| **Satisfaction Equity** | No stakeholder group's mean satisfaction >1 std dev below overall mean | Monitor for outliers |
 | **Implementation Rate** | Consensus actually implemented (30-day follow-up) | >70% |
 
-*Note: "Satisfaction Equity" is context-adaptive — acceptable variance differs between diplomatic negotiations vs. corporate planning sessions. Organizational psychology research suggests monitoring relative gaps rather than absolute thresholds.*
+*Note: "Satisfaction Equity" is context-adaptive — acceptable variance differs between diplomatic negotiations (country delegations, civil society, technical experts) vs. corporate contexts (departments, seniority levels). Research in negotiation theory and organizational psychology suggests monitoring relative gaps rather than absolute thresholds.*
 
 #### Ethical Safeguards
 
@@ -222,9 +222,10 @@ If I were building evaluation infrastructure, I'd propose tracking:
 │  └─────────────────────┘  └─────────────────────┘  └─────────────────────┘   │
 │                                                                               │
 │  ┌───────────────────────────────────────────────────────────────────────┐   │
-│  │  SATISFACTION BY ROLE (Equity Check: No group >1σ below mean)        │   │
-│  │  • Executives: 4.5/5  • Engineers: 4.0/5  • Support: 3.8/5           │   │
-│  │  ✓ All groups within acceptable range (mean=4.2, σ=0.35)             │   │
+│  │  SATISFACTION BY STAKEHOLDER (Equity Check: No group >1σ below mean) │   │
+│  │  • Developed Nations: 4.3/5  • Developing Nations: 4.0/5             │   │
+│  │  • Civil Society: 3.9/5  • Technical Experts: 4.2/5                  │   │
+│  │  ✓ All groups within acceptable range (mean=4.1, σ=0.16)             │   │
 │  └───────────────────────────────────────────────────────────────────────┘   │
 │                                                                               │
 │  ┌───────────────────────────────────────────────────────────────────────┐   │
