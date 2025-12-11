@@ -192,8 +192,10 @@ If I were building evaluation infrastructure, I'd propose tracking:
 | Metric | Definition | Target |
 |--------|------------|--------|
 | **Actionability** | Can consensus convert to concrete actions? | >75% |
-| **Satisfaction Variance** | Std dev of satisfaction across roles | <0.5 |
+| **Satisfaction Equity** | No role group's mean satisfaction >1 std dev below overall mean | Monitor for outliers |
 | **Implementation Rate** | Consensus actually implemented (30-day follow-up) | >70% |
+
+*Note: "Satisfaction Equity" is context-adaptive — acceptable variance differs between diplomatic negotiations vs. corporate planning sessions. Organizational psychology research suggests monitoring relative gaps rather than absolute thresholds.*
 
 #### Ethical Safeguards
 
@@ -214,10 +216,16 @@ If I were building evaluation infrastructure, I'd propose tracking:
 │  │  PROCESS HEALTH     │  │  OUTCOME QUALITY    │  │  ETHICAL CHECKS     │   │
 │  │  ────────────────   │  │  ────────────────   │  │  ────────────────   │   │
 │  │  PDI:  ████████ 0.72│  │  Actionable: 78%    │  │  Power Balance: ✓   │   │
-│  │  MVR:  ██████── 35% │  │  Satisfaction: 4.2  │  │  Suppression: ✓     │   │
-│  │  CSS:  ████████ 85% │  │  Impl. Pred: 72%    │  │  Hallucination: ✓   │   │
-│  │  HOR:  █████─── 28% │  │  Variance: 0.3      │  │  All checks passed  │   │
+│  │  MVR:  ██████── 35% │  │  Mean Sat: 4.2/5    │  │  Suppression: ✓     │   │
+│  │  CSS:  ████████ 85% │  │  Equity Check: ✓    │  │  Hallucination: ✓   │   │
+│  │  HOR:  █████─── 28% │  │  Impl. Pred: 72%    │  │  All checks passed  │   │
 │  └─────────────────────┘  └─────────────────────┘  └─────────────────────┘   │
+│                                                                               │
+│  ┌───────────────────────────────────────────────────────────────────────┐   │
+│  │  SATISFACTION BY ROLE (Equity Check: No group >1σ below mean)        │   │
+│  │  • Executives: 4.5/5  • Engineers: 4.0/5  • Support: 3.8/5           │   │
+│  │  ✓ All groups within acceptable range (mean=4.2, σ=0.35)             │   │
+│  └───────────────────────────────────────────────────────────────────────┘   │
 │                                                                               │
 │  ┌───────────────────────────────────────────────────────────────────────┐   │
 │  │  DISSENT REGISTER (Preserved Minority Views)                          │   │
