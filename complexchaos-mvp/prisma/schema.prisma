@@ -1,0 +1,230 @@
+// This is your Prisma schema file
+// Learn more: https://pris.ly/d/prisma-schema
+
+/**
+ * ComplexChaos Database Schema
+ * 
+ * Core Models:
+ * - User: System users (facilitators)
+ * - Session: Consensus-building initiatives
+ * - Stakeholder: Participants in sessions
+ * - Submission: Stakeholder inputs (text, audio, documents)
+ * - Synthesis: AI-generated consensus statements
+ * - Critique: Stakeholder feedback on syntheses
+ * 
+ * Design Philosophy:
+ * - Clear relationships (explicit foreign keys)
+ * - Timestamps on all models (createdAt, updatedAt)
+ * - Soft deletes (isDeleted flag, not implemented yet)
+ * - Optimized for reads (indexed foreign keys)
+ */
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/**
+ * User Model
+ * Represents facilitators who create and manage consensus sessions
+ * 
+ * Future: Add OAuth providers, roles, permissions
+ */
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  avatarUrl String?
+  
+  /// Sessions this user facilitates
+  sessions Session[]
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([email])
+}
+
+/**
+ * Session Model
+ * A consensus-building initiative with multiple stakeholders
+ * 
+ * Lifecycle:
+ * 1. 'pending' → Session created, stakeholders being invited
+ * 2. 'active' → Stakeholders submitting inputs
+ * 3. 'synthesizing' → AI generating consensus
+ * 4. 'completed' → Final consensus reached
+ * 
+ * Types:
+ * - 'climate': Climate negotiations
+ * - 'strategic_planning': Corporate strategy
+ * - 'procurement': Vendor selection
+ * - 'risk_management': Risk assessment
+ */
+model Session {
+  id          String   @id @default(cuid())
+  title       String
+  description String?  @db.Text
+  type        String   // Use enum in application layer
+  status      String   @default("pending") // 'pending', 'active', 'synthesizing', 'completed'
+  
+  /// Facilitator who created this session
+  facilitatorId String
+  facilitator   User   @relation(fields: [facilitatorId], references: [id], onDelete: Cascade)
+  
+  /// Participants in this session
+  stakeholders  Stakeholder[]
+  
+  /// All inputs submitted to this session
+  submissions   Submission[]
+  
+  /// AI-generated consensus statements
+  syntheses     Synthesis[]
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([facilitatorId])
+  @@index([status])
+  @@index([type])
+}
+
+/**
+ * Stakeholder Model
+ * A participant in a consensus session
+ * 
+ * Roles (examples for climate negotiations):
+ * - 'developed_nation': G7, EU countries
+ * - 'developing_nation': African Group, AOSIS
+ * - 'civil_society': NGOs, youth delegates
+ * - 'technical_expert': Scientists, legal advisors
+ * 
+ * Future: Link to User model for authenticated stakeholders
+ */
+model Stakeholder {
+  id    String @id @default(cuid())
+  name  String
+  email String
+  role  String // Use enum in application layer
+  
+  /// Session this stakeholder participates in
+  sessionId String
+  session   Session @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  
+  /// Inputs submitted by this stakeholder
+  submissions Submission[]
+  
+  /// Satisfaction ratings (future)
+  // satisfactionRating Float?
+  
+  createdAt DateTime @default(now())
+
+  @@index([sessionId])
+  @@index([email])
+}
+
+/**
+ * Submission Model
+ * Input from a stakeholder (text, audio, document)
+ * 
+ * MVP: Text-only
+ * Future: Audio transcriptions, document extracts
+ * 
+ * Privacy: Submissions are private until AI synthesis phase
+ */
+model Submission {
+  id      String @id @default(cuid())
+  content String @db.Text
+  type    String @default("text") // 'text', 'audio', 'document'
+  
+  /// Optional: File URL if type is 'audio' or 'document'
+  fileUrl String?
+  
+  /// Optional: Extracted metadata (e.g., audio duration, doc page count)
+  metadata Json?
+  
+  /// Stakeholder who submitted this
+  stakeholderId String
+  stakeholder   Stakeholder @relation(fields: [stakeholderId], references: [id], onDelete: Cascade)
+  
+  /// Session this submission belongs to
+  sessionId String
+  session   Session @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  
+  createdAt DateTime @default(now())
+
+  @@index([sessionId])
+  @@index([stakeholderId])
+}
+
+/**
+ * Synthesis Model
+ * AI-generated consensus statement
+ * 
+ * Versioning:
+ * - Each refinement creates a new Synthesis with incremented version
+ * - Latest version is determined by MAX(version) for a session
+ * 
+ * Streaming:
+ * - Initial save when streaming starts (empty content)
+ * - Updated incrementally as tokens stream
+ * - Finalized when streaming completes
+ */
+model Synthesis {
+  id         String  @id @default(cuid())
+  content    String  @db.Text
+  version    Int     @default(1)
+  modelUsed  String  @default("gpt-4-turbo") // 'gpt-4-turbo', 'gpt-4o', etc.
+  tokenCount Int?
+  
+  /// Cost tracking (future)
+  costUsd    Float?
+  
+  /// Session this synthesis belongs to
+  sessionId String
+  session   Session @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  
+  /// Critiques on this synthesis
+  critiques Critique[]
+  
+  /// Metadata: themes identified, minority views, etc.
+  metadata Json?
+  
+  createdAt DateTime @default(now())
+
+  @@index([sessionId])
+  @@index([version])
+}
+
+/**
+ * Critique Model
+ * Stakeholder feedback on a synthesis
+ * 
+ * Purpose:
+ * - "What did this summary miss?"
+ * - "Whose view is underrepresented?"
+ * 
+ * Drives the iterative refinement loop
+ */
+model Critique {
+  id      String @id @default(cuid())
+  content String @db.Text
+  
+  /// Synthesis being critiqued
+  synthesisId String
+  synthesis   Synthesis @relation(fields: [synthesisId], references: [id], onDelete: Cascade)
+  
+  /// Stakeholder who submitted critique
+  stakeholderId String
+  // stakeholder   Stakeholder @relation(fields: [stakeholderId], references: [id])
+  // TODO: Add this relation after confirming Stakeholder model structure
+  
+  createdAt DateTime @default(now())
+
+  @@index([synthesisId])
+  @@index([stakeholderId])
+}
